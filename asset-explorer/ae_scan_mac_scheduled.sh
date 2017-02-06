@@ -40,8 +40,12 @@ PORT=${PORT:-80}
 SCHEMA=${SCHEMA:-http}
 INTERVAL=${INTERVAL:-3600}
 
+LAUNCHD_PATH=/Library/LaunchDaemons
+LAUNCHD_NAME=com.manageengine.servicedesk.scan.interval.mac
+
 AESCAN_PATH=/opt/local/bin
 AESCAN_NAME=ae-scan-mac
+
 AESCAN_CONTENT=$(cat <<AESCAN_CONTENT
 #!/bin/sh
 
@@ -132,8 +136,6 @@ main \$*
 AESCAN_CONTENT
 )
 
-LAUNCHD_PATH=/Library/LaunchDaemons
-LAUNCHD_NAME=com.manageengine.servicedesk.scan.interval.mac
 LAUNCHD_CONTENT=$(cat <<LAUNCHD_CONTENT
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-/Apple/DTD PLIST 1.0/EN" "http:/www.apple.com/DTDs/PropertyList-1.0.dtd">
