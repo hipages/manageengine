@@ -20,13 +20,13 @@ An installer for a scheduled version of [ManageEngine Asset Explorer][ae-website
 ## How to install
 
 ```bash
-sudo bash <(curl -s https://raw.githubusercontent.com/hipages/manageengine/master/asset-explorer/ae_scan_mac_scheduled.sh) -h servicedesk.mydomain.com
+curl -s https://raw.githubusercontent.com/hipages/manageengine/master/asset-explorer/ae_scan_mac_scheduled.sh | sudo bash -s -- -h servicedesk.mydomain.com
 ```
 
 ## How to Uninstall
 
 ```bash
-sudo bash <(curl -s https://raw.githubusercontent.com/hipages/manageengine/master/asset-explorer/ae_scan_mac_scheduled.sh) -h servicedesk.mydomain.com -r
+curl -s https://raw.githubusercontent.com/hipages/manageengine/master/asset-explorer/ae_scan_mac_scheduled.sh | sudo bash -s -- -h servicedesk.mydomain.com -r
 ```
 
 [ae-website]: https://www.manageengine.com/products/asset-explorer/
