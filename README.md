@@ -1,7 +1,21 @@
 # "Mac OS X Agent" for ManageEngine Asset Explorer
 
-Install a modified version of ManageEngine Asset Explorer's `ae_scan_mac.sh`
-and runs it on a defined interval (default: 3600s) via LaunchDaemon.
+An installer for a scheduled version of [ManageEngine Asset Explorer][ae-website] script "`ae_scan_mac.sh`". This allows to inventory all Mac OS X devices on a regular basis.
+
+## Features
+* Runs via LaunchDaemon on an hourly basis
+* Runs auto-update via LaunchDaemon on a weekly basis
+
+## Options
+
+| Option | Mandatory | Description |
+|--------|-----------|-------------|
+| -h | Yes | Hostname of the Service Desk or Asset Explorer (e.g. `servicedesk.test.com`) |
+| -p | No | Port (default: `80`) |
+| -s | No | Schema (default: `http`) |
+| -i | No | Interval in seconds to run the script (default: `3600`)
+| -u | No | Disables the installation of the weekly auto-updater |
+| -r | No | Runs the uninstaller |
 
 ## How to install
 
@@ -9,9 +23,10 @@ and runs it on a defined interval (default: 3600s) via LaunchDaemon.
 sudo bash <(curl -s https://raw.githubusercontent.com/hipages/manageengine/master/asset-explorer/ae_scan_mac_scheduled.sh) -h servicedesk.mydomain.com
 ```
 
-# How to Uninstall
+## How to Uninstall
 
-sudo bash <(curl -s https://gist.githubusercontent.com/estahn/93f3cd96dc652c87fa8ee94133aac0da/raw/fcdca2d9209869627abe37d8f8f6d357c8dfa425/ae_scan_mac.sh)
+```bash
+sudo bash <(curl -s https://raw.githubusercontent.com/hipages/manageengine/master/asset-explorer/ae_scan_mac_scheduled.sh) -h servicedesk.mydomain.com -r
+```
 
-
-ae.sh --host servicedesk.corp.hipagesgroup.com.au
+[ae-website]: https://www.manageengine.com/products/asset-explorer/
