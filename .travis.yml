@@ -1,3 +1,4 @@
+---
 language: bash
 
 sudo: false
@@ -10,7 +11,7 @@ addons:
       - shellcheck
 
 script:
- - bash -c 'shopt -s globstar; shellcheck **/*.{sh,bash}'
+  - bash -c 'shopt -s globstar; shellcheck **/*.{sh,bash}'
 
- matrix:
-   fast_finish: true
+matrix:
+  fast_finish: true
