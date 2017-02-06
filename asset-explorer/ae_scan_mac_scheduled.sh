@@ -209,6 +209,7 @@ if [ -n "${UNINSTALL+1}" ]; then
 fi
 
 [ -f "${LAUNCHD_PATH}/${LAUNCHD_NAME}.plist" ] && launchctl unload -w "${LAUNCHD_PATH}/${LAUNCHD_NAME}.plist"
+mkdir -p "${AESCAN_PATH}"
 printf %s\\n "${AESCAN_CONTENT}" > "${AESCAN_PATH}/${AESCAN_NAME}"
 chmod 755 "${AESCAN_PATH}/${AESCAN_NAME}"
 
