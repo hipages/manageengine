@@ -1,5 +1,7 @@
 # "Mac OS X Agent" for ManageEngine Asset Explorer
 
+[![Build Status](https://travis-ci.org/hipages/manageengine.svg?branch=master)](https://travis-ci.org/hipages/manageengine)
+
 An installer for a scheduled version of [ManageEngine Asset Explorer][ae-website] script "`ae_scan_mac.sh`". This allows to inventory all Mac OS X devices on a regular basis.
 
 ## Features
