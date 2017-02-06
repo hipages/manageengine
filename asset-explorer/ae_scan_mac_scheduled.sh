@@ -17,7 +17,7 @@ exit 1;
 
 while getopts "h:p:s:i:ru" OPTION; do
   case ${OPTION} in
-    h|host) HOST=${OPTARG};;
+    h) HOST=${OPTARG};;
     p) PORT=${OPTARG};;
     s) SCHEMA=${OPTARG};;
     i) INTERVAL=${OPTARG};;
