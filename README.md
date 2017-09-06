@@ -32,3 +32,9 @@ curl -s https://raw.githubusercontent.com/hipages/manageengine/master/asset-expl
 ```
 
 [ae-website]: https://www.manageengine.com/products/asset-explorer/
+
+## Register immediately
+
+```bash
+/opt/local/bin/ae-scan-mac
+```
