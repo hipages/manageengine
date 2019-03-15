@@ -61,7 +61,7 @@ SUPPORT="assetexplorer-support@manageengine.com"
 PRODUCT="AssetExplorer"
 
 COMPUTERNAME=$(hostname)
-OUTPUTFILE="$COMPUTERNAME.xml"
+OUTPUTFILE="\$COMPUTERNAME.xml"
 
 
 main()
